@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beyond Human: A Simple Future Story</title>
+  <meta name="description" content="Visual essay about the future of body feedback and human-friendly design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            base: {
+              50: '#f7f7f7', 100: '#efefef', 200: '#e5e5e5',
+              800: '#1f2937', 900: '#0b1220'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    [data-reveal] { opacity: 0; transform: translateY(8px); transition: opacity .7s ease, transform .7s ease; }
+    [data-reveal].in { opacity: 1; transform: none; }
+    .ratio-4x3 { aspect-ratio: 4 / 3; }
+    .ratio-16x9 { aspect-ratio: 16 / 9; }
+  </style>
+</head>
+<body class="bg-base-50 text-base-900 font-sans selection:bg-black selection:text-white">
+  <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-base-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
+      <div class="w-2 h-6 rounded-full bg-black"></div>
+      <h1 class="text-lg sm:text-xl font-semibold tracking-tight">Beyond Human: <span class="font-extrabold">A Simple Future Story</span></h1>
+      <div class="ml-auto flex items-center gap-2">
+        <button id="themeBtn" class="px-3 py-1.5 text-sm rounded-xl border border-base-200 hover:border-black">Toggle theme</button>
+        <button id="captionBtn" class="px-3 py-1.5 text-sm rounded-xl border border-base-200 hover:border-black">Show/Hide captions</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4">
+    <section class="my-8 md:my-12" aria-labelledby="prologue">
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-2" data-reveal>
+          <h2 id="prologue" class="text-2xl md:text-3xl font-extrabold leading-tight">Prologue</h2>
+          <p class="mt-3 text-base leading-relaxed text-gray-700">
+            By 2035, our bodies might “talk” through data. Small sensors could track heartbeats, breathing, or stress, and turn them into signals we can see or feel. This could be useful but also risky. This essay looks at a future where body feedback is part of daily life—in cities, sports, and healthcare. It asks: if our inner signals can be read, who should be allowed to use them, and who makes that choice?
+          </p>
+        </div>
+        <aside class="md:col-span-1" data-reveal>
+          <div class="p-4 rounded-2xl border border-base-200 bg-white shadow-soft">
+            <h3 class="font-semibold">Theme</h3>
+            <p class="text-sm text-gray-700">Beyond Human — how technology and the body could connect in the future.</p>
+            <h3 class="mt-3 font-semibold">Focus</h3>
+            <p class="text-sm text-gray-700">Tools should guide gently, respect privacy, and give people control.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="my-4 md:my-8" aria-labelledby="scenes">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/skin/1200/900" alt="Tattoo that shows skin signals" class="w-full h-full object-cover ratio-4x3" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            A smart tattoo shows skin signals and is meant to support you calmly, not pressure you.
+          </figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/breath/1200/900" alt="Breathing ring" class="w-full h-full object-cover ratio-4x3" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            A small ring guides your breathing with gentle vibrations, helping you relax without a screen.
+          </figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/crowd/1200/900" alt="City billboard" class="w-full h-full object-cover ratio-4x3" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            A city billboard changes based on crowd stress—does it help people or just sell ads?
+          </figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/sport/1200/900" alt="Sports belt" class="w-full h-full object-cover ratio-16x9" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            A sports belt gives small vibrations to correct posture, while the coach sees simple movement maps.
+          </figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/pass/1200/900" alt="Consent pass" class="w-full h-full object-cover ratio-4x3" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            A “consent pass” lets you share your body data only when and where you decide.
+          </figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/error/1200/900" alt="System error" class="w-full h-full object-cover ratio-4x3" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            Sometimes systems fail—like a false alert that locks doors. People must always have override power.
+          </figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/care/1200/900" alt="Home care" class="w-full h-full object-cover ratio-16x9" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            In home care, families share live health signs directly with each other, instead of big companies.
+          </figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl border border-base-200 bg-white" data-reveal>
+          <img src="https://picsum.photos/seed/rules/1200/900" alt="Design rules" class="w-full h-full object-cover ratio-4x3" />
+          <figcaption class="caption opacity-0 group-hover:opacity-100 transition-opacity absolute inset-x-3 bottom-3 bg-white/90 rounded-xl p-3 text-sm shadow-soft">
+            Good rules: collect only what’s needed, make it clear, let people change their minds, and keep data local.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="my-10 md:my-14" aria-labelledby="epilogue">
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-2" data-reveal>
+          <h2 id="epilogue" class="text-2xl md:text-3xl font-extrabold leading-tight">Epilogue</h2>
+          <p class="mt-3 text-base leading-relaxed text-gray-700">
+            Technology should not just add machines to our bodies—it should add meaning to our lives. If body feedback becomes a new language, designers are the ones shaping it. That language should protect dignity: slow down data when needed, always ask for consent, allow mistakes without harm, and give people the choice to say no. Even in a “beyond human” future, technology should still feel human.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <!-- ✅ Image Credits Section -->
+    <section class="my-10 md:my-14" aria-labelledby="credits">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 id="credits" class="text-2xl md:text-3xl font-extrabold leading-tight mb-4">Image Credits</h2>
+        
+        <p class="text-base text-gray-700 mb-4">
+          <strong>Source:</strong> <a href="https://picsum.photos" target="_blank" class="underline">Lorem Picsum</a> is a free placeholder image service.<br>
+          <strong>License:</strong> Picsum uses Unsplash images, which means they fall under the 
+          <a href="https://unsplash.com/license" target="_blank" class="underline">Unsplash License</a>.<br>
+          Images courtesy of Lorem Picsum, which provides free images from Unsplash photographers under the Unsplash License.
+        </p>
+
+        <ul class="list-disc pl-6 text-base text-gray-700 space-y-2">
+          <li><strong>Tattoo (Skin Signals):</strong> https://picsum.photos/seed/skin/1200/900</li>
+          <li><strong>Breathing Ring:</strong> https://picsum.photos/seed/breath/1200/900</li>
+          <li><strong>City Billboard:</strong> https://picsum.photos/seed/crowd/1200/900</li>
+          <li><strong>Sports Belt:</strong> https://picsum.photos/seed/sport/1200/900</li>
+          <li><strong>Consent Pass:</strong> https://picsum.photos/seed/pass/1200/900</li>
+          <li><strong>System Error:</strong> https://picsum.photos/seed/error/1200/900</li>
+          <li><strong>Home Care:</strong> https://picsum.photos/seed/care/1200/900</li>
+          <li><strong>Design Rules:</strong> https://picsum.photos/seed/rules/1200/900</li>
+        </ul>
+      </div>
+    </section>
+
+  <footer class="border-t border-base-200">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm flex flex-wrap items-center gap-3">
+      <span>© 2035 Visual Essay — Student: <em>Tushar Pandey</em></span>
+      <span class="opacity-60">|</span>
+      <span>Provocation: <strong>Beyond Human</strong></span>
+      <span class="opacity-60">|</span>
+      <span id="wordCount" class="opacity-70">Word count: —</span>
+      <span class="ml-auto opacity-60">Responsive: Desktop / Tablet / Phone</span>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in') })
+    }, { threshold: 0.05 });
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+    const themeBtn = document.getElementById('themeBtn');
+    function setDark(on){
+      document.body.classList.toggle('bg-base-900', on);
+      document.body.classList.toggle('text-base-50', on);
+      document.body.classList.toggle('bg-base-50', !on);
+      document.body.classList.toggle('text-base-900', !on);
+      document.querySelectorAll('.bg-white').forEach(el=>{
+        el.classList.toggle('bg-white', !on);
+        el.classList.toggle('bg-base-800', on);
+      });
+      document.querySelectorAll('.border-base-200').forEach(el=>{
+        el.classList.toggle('border-base-200', !on);
+        el.classList.toggle('border-gray-700', on);
+      });
+    }
+    let dark = false; themeBtn.addEventListener('click', ()=>{ dark=!dark; setDark(dark);});
+
+    const captionBtn = document.getElementById('captionBtn');
+    captionBtn.addEventListener('click', ()=>{
+      document.querySelectorAll('figcaption').forEach(c=>{
+        c.classList.toggle('opacity-0');
+        c.classList.toggle('opacity-100');
+      })
+    });
+
+    function countWords(){
+      const visibleText = Array.from(document.querySelectorAll('main p, main figcaption'))
+        .filter(el=> getComputedStyle(el).display !== 'none')
+        .map(el=> el.innerText).join(' ')
+        .replace(/—/g,' ').replace(/[\n\r]+/g,' ');
+      const count = visibleText.trim().split(/\s+/).filter(Boolean).length;
+      document.getElementById('wordCount').textContent = `Word count (approx): ${count}`;
+    }
+    countWords();
+    const observer = new MutationObserver(countWords);
+    observer.observe(document.body, { attributes: true, subtree: true });
+  </script>
+</body>
+</html>
